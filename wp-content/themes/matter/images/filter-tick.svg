@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="6px" height="4px" viewBox="0 0 6 4" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon/control/tick</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Designs" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Filters---Shopping-By-Category" transform="translate(-451.000000, -500.000000)" stroke="#FFFFFF">
+            <g id="icon/control/tick" transform="translate(451.000000, 499.000000)">
+                <path d="M4.64983899,1.7847033 C4.70891322,1.72662448 4.80388454,1.72743142 4.86196336,1.78650565 C4.92004219,1.84557989 4.91923525,1.94055121 4.86016101,1.99863003 L2.40207517,4.4152967 C2.34372489,4.47266376 2.25016412,4.47268104 2.19179265,4.41533553 L1.1398785,3.38191012 C1.08078282,3.32385312 1.0799408,3.2288821 1.1379978,3.16978642 C1.1960548,3.11069074 1.29102582,3.10984872 1.3501215,3.16790572 L2.29687531,4.09801912 L4.64983899,1.7847033 Z" id="tick-icon"></path>
+            </g>
+        </g>
+    </g>
+</svg>

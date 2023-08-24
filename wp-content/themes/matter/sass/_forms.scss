@@ -1,0 +1,683 @@
+/* Color
+================================================== */
+
+$successColor: $col-green;
+$warningColor: $col-black;
+$errorColor: $col-red;
+$autoSelect:transparent;
+    
+/* Labels
+================================================== */
+
+label,
+legend,
+.label,
+.legend {
+	display: inline-block;
+}
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+label.error {
+	color: $errorColor;
+	font-size: .75em;
+	display: block;
+	padding: .4em 0;
+}
+
+
+/* Messages
+================================================== */
+
+.msg {
+	padding: .5em 1em;
+	@include border-radius(0);
+	margin: 1em 0;
+	> * {
+		color: #fff;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.msg.success {
+	background-color: $successColor;
+}
+.msg.error {
+	background-color: $errorColor;
+}
+.msg.waiting {
+	background-color: $warningColor;
+}
+.msg .preloader-animation {
+	margin-right: 1em;
+	margin-bottom: .5em;
+    margin-top: .5em;
+}
+
+
+/* All fields
+================================================== */
+
+$border-radius:0;
+
+.fieldstyle {
+	outline: 0;
+	box-shadow: none;
+// 	border: solid 1px $col-ltgrey;
+	@include border-radius($border-radius);
+	background-color: transparent;
+
+	font-size: 1em;
+	padding: .5em 0;
+
+	outline: none;
+	margin: 0;
+
+	display: inline-block;
+	position: relative;
+	@include box-sizing(border-box);
+	@include transition(background-color 0.5s);
+	@include appearance(none);
+
+	border: none;
+	border-bottom: solid .5px;
+
+
+
+
+}
+.fieldstyle:focus {
+	outline: none !important;
+	background-color: transparent;
+}
+
+
+.bc-form__control--error .fieldstyle,
+.fieldstyle.error {
+	border: none;
+	border-bottom-color:$errorColor;
+}
+.fieldstyle.valid {
+	border: none;
+	border-bottom-color:$successColor;
+}
+
+
+
+
+/* Input & textarea
+================================================== */
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+input[type="password"],
+
+
+
+textarea {
+	@extend .fieldstyle;
+}
+textarea {
+    resize: vertical;	
+}
+
+
+
+
+/* Checkboxes  & Radio buttons
+================================================== */
+
+.checkboxes,
+.radios {
+	@extend .checkradio;
+}
+.checkradio {
+	display: inline-block;
+	padding: 0;
+	position: relative;
+
+	//overide the default by hiding this
+	input {
+		display: inline-block;
+		visibility: hidden;
+		width: 0;
+		height: 0;
+	}
+	
+	//the label
+	label {
+		display: inline-block;
+		width: auto;
+		padding: 0 0 0 24px;
+		height: auto;
+		margin: 0 19px 0 0;		
+		position: relative;
+		font-weight: normal;
+		cursor: pointer;
+
+	}	
+
+	//the box
+	label:before {
+		content: '';
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		top: 0;
+		left: 0;
+		display: inline-block;
+// 		border: solid 1px $col-ltgrey;
+		background: #fff;
+		margin-right: 6px;
+		cursor: pointer;
+
+	}
+}
+.checkradio.vert {
+	> input, label {
+		display: block;
+	}
+}
+
+
+
+
+.checkboxes {
+	//the tick inside the box
+	input[type="checkbox"]:checked + label:after {
+		position: absolute;
+		top: 0;
+		height: 18px;
+		line-height: 18px;
+		text-align: center;
+		width: 18px;
+		left: 0;
+		background:url(../../images/icons/check.svg) center center no-repeat;
+		@include background-size(contain);
+		content: '';
+	}
+}
+
+
+.radios {
+	label:before {
+		border-radius: 100%;
+/*
+		.box { 
+			@include border-radius(100%);
+		}
+*/
+	}
+	input[type="radio"]:checked + label:after {
+		position: absolute;
+		top: 4px;
+		height: 10px;
+		width: 10px;
+		left: 4px;
+		content: '';
+		display: block;
+		background: #000;
+		@include border-radius(100%);
+	}
+}
+
+
+
+//Turn checkbox into a toggle
+.checkboxes.toggle {
+	border: solid 1px #ccc;
+	padding: 0;
+	position: relative;
+	width: 100px;
+	height: 40px;
+	line-height: 40px;
+	padding: 0;
+	margin-bottom: 20px;
+	> label {
+		top:0;
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: block;
+		z-index: 20;
+		background: #ccc;
+	}
+	span {
+	    display: block;
+	    vertical-align: middle;
+	    width: 50%;
+	    position: absolute;
+	    height: 100%;
+	    line-height: 40px;
+	    text-align: center;
+		color: #fff;
+	}
+	>label:before {
+		position: absolute;
+		text-indent: -9999px;
+		height: 100%;
+		width: 50%;
+		border: none;
+		top:0;
+		left:0;		
+		margin: 0;	
+		@include transition(0.5s);
+		z-index: 30;
+	}
+	>label:after {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: $errorColor;
+		content: '';
+		top:0;
+		left:0;
+		position: absolute;
+		opacity: 0;
+		z-index: -10;
+		@include transition(0.5s);
+	}
+	> input[type="checkbox"]:checked+label:before {
+		left:50%;
+		background: #fff;
+	}
+	> input[type="checkbox"]:checked+label:after {
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: $successColor;
+		content: '';
+		top:0;
+		left:0;
+		position: absolute;
+		z-index: -10;
+		opacity: 1;
+	}
+}
+
+
+//Turn radio buttons into a toggle
+.radios.toggle {
+	border: solid 1px #ddd;
+	display: table;
+	> label {
+		display: table-cell;
+		padding: 1em;
+		border-right: solid 1px #ddd;
+		margin: 0;
+		position: relative;
+		span {
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
+	> label:last-child {
+		border-right: none;
+	}
+	label:before {
+		display: none;
+	}
+	input[type="radio"]:checked {
+		visibility: hidden;
+	}
+	input[type="radio"]:checked + label {
+		color: #fff;
+	}
+	input[type="radio"]:checked + label:after {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		content: '';
+		display: block !important;
+		background: #ddd;
+		@include border-radius(0);
+		z-index: -10;
+	}
+}
+
+
+
+
+
+/* Select
+	
+	Ref: https://select2.org/
+================================================== */
+
+select {
+	@extend .fieldstyle;
+	cursor: pointer;
+}
+select[multiple]{
+	background-image: none;
+}
+.select {
+	border: none;
+	border-bottom: solid .5px;
+	background: url(../images/collapse.svg) no-repeat right center;
+	@include background-size(15px);
+	padding-left: 0;
+}
+
+// Style _assets/styles/scss/select2/theme/default/_single.scss
+
+
+
+
+
+
+/* Placeholder text
+================================================== */
+
+$placeholdercol: black;
+
+::-webkit-input-placeholder {
+   color: $placeholdercol;
+}
+:-moz-placeholder { /* Firefox 18- */
+   color: $placeholdercol;  
+}
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $placeholdercol;  
+}
+:-ms-input-placeholder {  
+   color: $placeholdercol;  
+}
+
+
+
+
+
+/* Autofill text
+================================================== */
+		
+input:-webkit-autofill, 
+textarea:-webkit-autofill, 
+select:-webkit-autofill {
+	background: transparent !important;
+    -webkit-box-shadow: 0 0 0px 1000px $autoSelect inset !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+
+
+
+/* BC field overrides BC account pages
+================================================== */
+
+
+.bc-form .bc-form__control {
+	margin: 0;
+}
+
+@media(min-width:$md-bp - 1) {
+	.bc-form .bc-form__control {
+		margin: 0;
+	}
+}	
+
+
+.bc-account-pages-restyled {
+	.bc-form .bc-form__control input[type=email], 
+	.bc-form .bc-form__control input[type=number], 
+	.bc-form .bc-form__control input[type=password], 
+	.bc-form .bc-form__control input[type=tel], 
+	.bc-form .bc-form__control input[type=text], 
+	.bc-form .bc-form__control input[type=url],
+	.bc-form .bc-form__control select,
+	.bc-form textarea {
+		@extend .fieldstyle;
+		background: transparent;
+	}
+	.bc-form .bc-form__control {
+// 		margin-bottom: 0;
+	}
+	.bc-form.bc-form--has-errors .bc-form__control--error input[type=email], 
+	.bc-form.bc-form--has-errors .bc-form__control--error input[type=number], 
+	.bc-form.bc-form--has-errors .bc-form__control--error input[type=password], 
+	.bc-form.bc-form--has-errors .bc-form__control--error input[type=tel], 
+	.bc-form.bc-form--has-errors .bc-form__control--error input[type=text], 
+	.bc-form.bc-form--has-errors .bc-form__control--error select, 
+	.bc-form.bc-form--has-errors .bc-form__control--error textarea {
+		border: none;
+		border-bottom-color:solid .5px $errorColor;
+	}
+
+
+	.bc-form select {
+		@extend .select;	
+	}
+	
+	
+	.bc-btn {
+		@extend .btn;
+		@extend .btn-standard;
+	
+	}
+	
+
+	
+	
+	
+	
+	
+	/* smart placeholders
+	------------------------------- */
+	
+	.bc-form__control {
+
+		position: relative;
+		padding-top: 0.7em;
+		margin: 0;
+	
+		.bc-form__label {
+			top: 1.5em;
+			position: absolute !important;
+			@include transition(.5s);
+			pointer-events: none;
+		    z-index: 1;
+		    padding: 0;
+		    margin: 0;
+			font-size: 1.15em;
+		   
+		}
+		&.active {
+			.bc-form__label {
+				font-size: .75em;
+			    top: 0;
+			}
+		}
+		.fieldstyle {
+			font-size: 1.15em;
+			height: auto;
+		}
+		
+		@media(min-width:$sm-bp) {
+			.bc-form__label {
+				font-size: 1em;
+			}
+			.fieldstyle {
+				font-size: 1em;
+				
+			}
+	
+			&.active {
+				.bc-form__label {
+					font-size: .75em;
+					
+				}
+			
+			}
+		}
+		
+	}
+}
+
+/* Smart placeholder
+================================================== */
+
+.smartplaceholder {
+	position: relative;
+	padding-top: 0.7em;
+
+
+	label {
+		top: .9em;
+		position: absolute;
+		@include transition(.5s);
+		pointer-events: none;
+	    z-index: 1;
+	    padding: 0;
+		font-size: 1.15em;
+	   
+	}
+	&.active {
+		label {
+			font-size: .75em;
+		    top: 0;
+		}
+	}
+	.fieldstyle {
+		font-size: 1.15em;
+		
+	}
+	
+	@media(min-width:$sm-bp) {
+		label {
+			font-size: 1em;
+		}
+		.fieldstyle {
+			font-size: 1em;
+			
+		}
+
+		&.active {
+			label {
+				font-size: .75em;
+				
+			}
+		
+		}
+	}
+}
+
+
+/* contact form
+================================================== */
+
+.wpcf7-form,
+.contact-form {
+    margin-bottom: 3em;
+   	margin-top: 2em;
+	background: #FFF;
+	border: solid .5px #B8B8B8;
+	padding: 1em;
+    overflow: hidden;
+    padding-top: 2.25em;
+    padding-bottom: 2.5em;
+	.smartplaceholder {
+		width: 100%;
+	    margin-top: 2.5em;
+		> * {
+			width: 100%;
+		}
+	}
+
+	input,
+	textarea,
+	select {
+		width: 100%;
+	}
+	input[type="submit"]{
+		width: auto;
+		@extend .btn;
+		@extend .btn-standard;
+	}
+	.first-name-wrap {
+		clear: left;
+	}
+	.message-wrap {
+		width: 100%;
+		clear: both;
+	}
+	textarea {
+		min-height:160px;
+	}
+	.btn {
+	    margin-top: 2em;
+	}
+	.btn-wrap {
+		clear: both;
+	}
+	@media(min-width:$md-bp) {
+	    padding: 4em 3em;
+		.smartplaceholder {
+			width:50%;
+			float: left;
+		}
+		.message-wrap {
+			width: 100%;
+			clear: both;
+		}
+
+		.reason-wrap,
+		.email-wrap,
+		.first-name-wrap {
+		    width: 46%;
+		    margin-right: 4%;		
+		}
+	}
+	@media(min-width:$lg-bp) {
+	    padding: 4em 6em;
+	}
+
+
+
+
+	.wpcf7-not-valid {
+	    border-bottom-color: red !important;
+	}
+
+
+	span.wpcf7-not-valid-tip {
+	    font-size: 14px;
+	    padding: .5em 0;
+		color: rgb(208, 51, 31);
+	}
+	.wpcf7-validation-errors {
+		color: rgb(208, 51, 31);
+		font-weight:400;
+
+		
+	}
+
+
+	div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+	    border: none;
+	    padding: 0;
+	    margin: 1em 0;
+	}
+
+}
+.contact-form-title {
+	margin-bottom: .75em;	
+}
+
+
+

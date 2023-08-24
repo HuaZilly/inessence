@@ -1,0 +1,48 @@
+/* SETTINGS */
+
+
+/* 1. Define Colors
+================================================== */
+
+// Colors
+$col-black: #2C2A29;
+$col-ptblack: #000;
+
+$col-dkgrey: #2C2A29;
+$col-mdgrey: #53565A;
+$col-paleslate: #F6F9FC;
+$col-white: #FFF;
+$col-red:#FB3640;
+$col-green:#1C9F51;
+$col-linegrey:	#B8B8B8;
+$col-ltgrey:	#D8D8D8;
+$col-fdgrey: #F2F2F2;
+
+
+/* 2. Create reusable swatches
+================================================== */
+
+$colours:
+
+	"black"		$col-black,
+	"dkgrey"	$col-dkgrey,
+	"mdgrey"	$col-mdgrey,
+	"paleslate"	$col-paleslate,
+	"white"		$col-white,
+	"red"		$col-red,
+	"green"		$col-green
+	;
+
+@each $i in $colours{
+		
+	.background-color-#{nth($i, 1)} {
+		background: nth($i, 2);
+	}
+	.text-color-#{nth($i, 1)} {
+		color:nth($i, 2);
+	}
+	.background-stretch-full-width-#{nth($i, 1)}:before {
+		background: nth($i, 2);
+	}
+}
+

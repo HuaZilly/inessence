@@ -1,0 +1,301 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i&display=swap');
+
+
+
+
+
+/* Reset
+================================================== */
+
+html,
+body {
+    color: $col-black;
+}
+body {
+	font-family: 'Roboto', sans-serif;
+	font-display: fallback;
+	
+    line-height: 1.55;
+
+	font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+
+	font-size: 0.8125em;
+	@media screen and (min-width: $md-bp) {
+		font-size: 0.9375em;
+	}
+}
+
+
+
+/* Links
+================================================== */
+
+a, a:visited { 
+ 	color: $col-black; 
+	text-decoration: none; 
+	outline: 0; 
+	cursor: pointer;
+	@include transition(color 0.5s)
+}
+a:hover, a:focus {
+	text-decoration: none; 
+	color: $col-black; 
+}
+a.bc-link {
+	color: $col-black;
+}
+
+
+
+/* Headings
+========================================================================== */
+
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+	margin:1.75em 0 0 0;
+	padding: 0;
+    font-weight: 700;
+    font-family: 'Georgia', serif;	
+
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a,
+.h1 a, .h2 a, .h3 a, .h4 a, .h5 a, .h6 a {
+	font-weight: inherit;
+}
+
+
+
+
+h1, .h1 { 
+	
+    font-size: 2.0em;
+	line-height: 1.4;
+	
+	@media screen and (min-width: $md-bp) {
+		font-size: 2.25em;	
+	}
+}
+h2, .h2 { font-size: 1.9375em;		}
+h3, .h3 { 
+	font-size: 1.4375em;		
+
+    line-height: 1.45;
+    
+}
+h4, .h4 { font-size: 1.25em;		}
+h5, .h5 { 
+	font-size: 1.225em;
+	@media screen and (min-width: $md-bp) {
+		font-size: 1.125em;		
+	}
+}
+h6, .h6 { font-size: 0.8em;		}
+p {
+	margin: 1.5em 0; 
+}
+.p {
+	margin: 1em 0; 	
+}
+.p1 {}
+.p2 {}
+.p3 {}
+em { font-style: italic; }
+b, strong { font-weight: bold; }
+.small,
+small { font-size: 80%; }
+
+.menu-item {
+	letter-spacing: 0.058125em;
+}
+
+span.heading-aside {
+	font-family: roboto;
+    font-weight: 300;
+    font-size: .4em;
+}
+
+
+/* Helpers
+================================================== */
+
+//no break
+.nlbr {
+	display: inline-block;
+}
+//or use &nbsp; in the HTML
+
+
+
+
+
+
+
+
+
+/* Blockquotes
+================================================== */
+
+blockquote {
+	margin: 2em 0; 
+	display: block;
+	padding: 0 1em; 
+	position: relative;
+	border-left: solid 5px;
+	@media(min-width:$sm-bp) {
+		padding: 0 2em; 
+		font-size: 1.1em;
+	}
+}
+
+/* Address
+================================================== */
+
+address {
+	font-style: normal;
+}
+a[href*="mailto"] {
+    word-break: break-all;
+}
+
+/* Lists
+================================================== */
+
+.ol, .ul {
+	list-style: none;
+	margin: .5em 0; 
+	padding: 0;
+}
+.ul {
+	> li {
+		position: relative;
+		padding-left:1em;
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0.5em;
+			left: 0;
+			width: 5px;
+			height: 5px;
+			display: block;
+			background: #FFF;
+		}
+	}
+}
+.ol {
+    counter-reset: li;
+	> li {
+		position: relative;
+		padding-left:1em;
+		&:before {
+		    content: counter(li);
+		    counter-increment: li;
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+		}
+	}
+}
+
+.style-bullets {
+	ul {
+		list-style: none;
+		margin: .5em 0; 
+		padding: 0;
+
+		> li {
+			position: relative;
+			padding-left:1.75em;
+			&:before {
+				content: '';
+				@include border-radius(100%);
+				position: absolute;
+				top: 0.5em;
+				left: 0;
+				width: 3px;
+				height: 3px;
+				display: block;
+				background: $col-black;
+			}
+		}
+	}
+}
+
+
+.truncate {
+	margin: 1.5em 0; 	
+	//max-height: 80px;
+	overflow: auto;
+
+	
+
+	.untruncated{
+		display: none;
+	}
+
+	.truncated,.untruncated{
+		p{
+			margin-top: 0px !important;
+		}
+	}
+
+	&.active{
+		.truncated{
+			display: none;
+		}
+		.untruncated{
+			display: block;
+		}
+	}
+    
+	// .truncated {
+	// 	display: inline		
+	// }
+	// .untruncated {
+	// 	display: none;
+	// }
+	// p {
+	// 	display: inline
+	// }
+	// &.active {
+	// 	.truncated {
+	// 		display: inline !important;
+	// 	}
+	// 	.untruncated {
+	// 		display: inline;
+	// 	}
+	// }
+
+	.toggle-truncate {
+		text-decoration: underline;
+		display: inline-block;
+	}
+}
+
+
+/* Helpers
+================================================== */
+
+//text align
+.aligncenter {
+	text-align: center;
+}
+.alignleft {
+	text-align: left;
+}
+.alignright {
+	text-align: right;
+}
+
+.truncate-string-with-ellipsis {
+    width: 215px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+

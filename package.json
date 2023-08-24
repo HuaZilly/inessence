@@ -1,0 +1,41 @@
+{
+  "name": "inessence",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "autoprefixer": "^9.4.7",
+    "cssnano": "^4.1.8",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "init": "npm i && npm run setup-https",
+    "up": "docker-compose up -d && npm run update-db && npm run import-db && gulp",
+    "up-lite": "docker-compose up -d && npm run import-db && gulp",
+    "down": "npm run export-db && docker-compose down",
+    "ssh": "docker exec -it inessence_wordpress_1 /bin/bash",
+    "wpe": "ssh ietransfer20@ietransfer20.ssh.wpengine.net",
+    "view-db": "docker exec -it inessence_db_1 mysql -u root --password=root client_db",
+    "import-db": "docker exec -i inessence_db_1 mysql -u root --password=root client_db < ./db/backup.sql",
+    "export-db": "docker exec inessence_db_1 /usr/bin/mysqldump -u root --password=root client_db > ./db/backup.sql",
+    "update-db": "npm run pull-db && npm run localise-db",
+    "pull-db": "scp ietransfer20@ietransfer20.ssh.wpengine.net:~/sites/ietransfer20/wp-content/mysql.sql ./db/backup.sql",
+    "localise-db": "sed -i \"\" \"s/https:\\/\\/www.inessence.com.au/http:\\/\\/localhost:8057/g\" db/backup.sql",
+    "obtain-uploads": "rsync -au ietransfer20@ietransfer20.ssh.wpengine.net:~/sites/ietransfer20/wp-content/uploads/ ./wp-content/uploads/",
+    "setup-https": "docker-compose up -d && npm run obtain-apache && docker-compose down && npm run set-symlinks && npm run set-certs && echo 'Init complete - Open docker-compose.yml and remove commented lines.'",
+    "obtain-apache": "docker cp $npm_package_name'_wordpress_1':/etc/apache2 ./_dev",
+    "set-symlinks": "cd _dev/apache2/sites-enabled && ln -s ../sites-available/default-ssl.conf ./ && cd ../mods-enabled && ln -s ../mods-available/socache_shmcb.load ./ && ln -s ../mods-available/ssl.load ./ && ln -s ../mods-available/ssl.conf ./ && cd ../../../",
+    "set-certs": "rm _dev/apache2/sites-available/*.conf && cp _dev/default-ssl.conf _dev/apache2/sites-available/default-ssl.conf && cp _dev/000-default.conf _dev/apache2/sites-available/000-default.conf"
+  },
+  "author": "Matter Design",
+  "license": "ISC"
+}

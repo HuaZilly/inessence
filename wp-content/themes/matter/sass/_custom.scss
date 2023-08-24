@@ -1,0 +1,24 @@
+body {
+  &.single-bigcommerce_product {
+    .yotpo.bottomLine.yotpo-small {
+      margin-right: 20px;
+    }
+  }
+  .yotpo {
+    .write-review-btn-hidden,
+    .text-m {
+      color: #2c2a29 !important;
+      line-height: 20px;
+    }
+    .yotpo-review,
+    .yotpo-question,
+    .yotpo-comment,
+    .yotpo-onsite-upload {
+      .yotpo-header {
+        .yotpo-icon-profile {
+          background: black;
+        }
+      }
+    }
+  }
+}

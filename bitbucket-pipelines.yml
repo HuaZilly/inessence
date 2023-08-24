@@ -1,0 +1,20 @@
+pipelines:
+  branches:
+    "wpe-production":
+      - step:
+          deployment: production
+          script:
+            - git push git@git.wpengine.com:production/ietransfer20.git wpe-production
+            - echo "Pushed to Production"
+    "wpe-staging":
+      - step:
+          deployment: staging
+          script:
+            - git push git@git.wpengine.com:production/iestag.git wpe-staging
+            - echo "Pushed to Staging"
+    "wpe-develop":
+      - step:
+          deployment: test
+          script:
+            - git push git@git.wpengine.com:production/ENVIRONMENT.git wpe-develop
+            - echo "Pushed to Development"

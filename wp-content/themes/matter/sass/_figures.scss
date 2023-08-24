@@ -1,0 +1,67 @@
+/* Images
+================================================== */
+
+figure {
+	border: none;
+	padding: .5em 0;	
+	display: inline-block;
+	margin: 1em 0;	
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+
+	@include user-select(none);
+
+}
+
+
+
+
+
+
+
+/* Lazy Load
+========================================================== */
+
+
+.lazyload  {
+	@include transition(opacity 1s);		
+	opacity: 1;
+	&.lazy {
+		opacity: 0;
+	}
+}
+
+
+
+/* Background images
+========================================================== */
+
+.fillparent {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top:0;
+	left: 0;
+}
+
+
+	
+.background-cover {
+	@include background-size(cover);
+	background-position: center center;
+
+	&.desktop {
+		display: none;
+	}
+	@media(min-width:$sm-bp) {
+		&.mobile {
+			display: none;
+		}
+		&.desktop {
+			display: block;
+		}
+	}
+}	

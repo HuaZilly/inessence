@@ -1,0 +1,38 @@
+/* Warning messages
+================================================== */
+
+.warning {
+    display: none;
+    background: #ffa500;
+    color: #000;
+    text-align: center;
+    margin: 0;
+    font-weight:bold;
+    z-index: 9999;
+     position: fixed;
+    width: 100%;
+    padding: 1em;
+    @include box-sizing(border-box);
+    a {
+	    text-decoration: underline;
+	    color: #000 !important;
+    }
+    > span {
+		display: inline-block;	    
+    }
+}
+
+// For users without JS
+.nojs-warn {
+	top:0;
+	bottom: auto;
+	display: block;
+}
+
+// For users using old IE
+.ie10 {
+	.datedbrowser-warn {
+		top:0;
+		display: block;
+	}	
+}

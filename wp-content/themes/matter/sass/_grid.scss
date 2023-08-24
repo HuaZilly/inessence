@@ -1,0 +1,353 @@
+/* Breakpoints
+================================================== */
+
+$sm-bp:		480px;	//mobile
+$md-bp:		769px;	//tablet
+$lg-bp:		990px;	//laptop
+$xl-bp:		1250px;	//desktop
+$xxl-bp:	1400px;	//large desktop
+$xxxl-bp:	1600px;	//xlarge desktop
+
+
+
+body {
+	overflow-x:hidden;
+}
+
+[class*="background-stretch-full-width"] {
+	position: relative;
+	&:before {
+		content: '';
+		display: block;
+		position: absolute;
+		z-index: -1;
+
+
+		height: 100%;
+	    width: 100vw;
+	    left: 50%;
+	    right: 50%;
+	    margin-left: -50vw;
+	    margin-right: -50vw;
+
+
+	}
+}
+
+
+
+
+/* full height elements	
+================================================== */
+
+.fullheight {
+	min-height: 100vh;
+	height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+	height: calc(var(--vh) * 100);		
+
+	background: #eee;
+	position: relative;
+}
+
+
+
+/* Grid	
+================================================== */
+
+$max-width: 1540px;
+$gutter: 2.4rem;
+$ttlcol: 12; //columns
+
+
+
+/* Grid
+
+	Ref: https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+	
+================================================== */
+
+@mixin span($nthcol, $ttlcol, $gutter){
+	width: (100%/$ttlcol) * $nthcol;
+}
+@mixin offset($nthcol, $ttlcol, $gutter){
+	margin-left: (100%/$ttlcol) * $nthcol;
+}
+
+
+.row.product-row {
+	
+	.columns {
+	}
+
+	@media(min-width:$md-bp) {
+		max-width: 1000px;
+		.columns {
+			padding-right: 1.375rem;
+			padding-left: 1.375rem;
+		}
+	}
+	
+	@media(min-width:$lg-bp) {
+		max-width: 1250px;
+		.columns {
+			padding-right: 1.65625rem;
+			padding-left: 1.65625rem;
+		}
+	}
+	@media(min-width:$xl-bp) {
+		max-width: 1420px;
+		.columns {
+			padding-right: 2.09375rem;
+			padding-left: 2.09375rem;
+		}
+	}
+	@media(min-width:$xxl-bp) {
+		max-width: 1580px;
+		.columns {
+			padding-right: 2.125rem;
+			padding-left: 2.125rem;
+		}
+	
+	}
+	
+	
+	
+}
+
+.wrapper {
+	@media(min-width:$lg-bp) {
+	    padding-left: 1rem;	
+	    padding-right: 1rem;	
+	}
+	@media(min-width:$xl-bp) {
+	    padding-left: 1.6rem;	
+	    padding-right: 1.6rem;	
+	}	
+}
+
+.row {
+    width: 100%;
+	max-width: $max-width;
+	margin-right: auto;
+	margin-left: auto;
+	@include box-sizing(border-box);
+
+
+	@media(min-width:$md-bp) {
+		padding-left: $gutter;
+		padding-right: $gutter;
+	}
+
+	&.nomaxwidth {
+		padding-left: 0;
+		padding-right: 0;
+		max-width: none;
+		margin-right: 0 - $gutter/2;
+		margin-left: 0 - $gutter/2;
+
+	}
+
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+
+
+	flex-wrap: wrap;
+	&.reverse-row {
+		flex-direction: row-reverse;
+	}
+	&.alignright {
+		justify-content: flex-end;		
+	}
+	.columns {
+		width: 100%;
+		padding-right: $gutter/2;
+		padding-left: $gutter/2;
+
+		@include box-sizing(border-box);
+		
+		//nested rows
+		> .row {
+			margin-right: -($gutter/2);
+			margin-left: -($gutter/2);
+		}
+	}
+	@media (max-width:$sm-bp - 1) {
+	    .col-sm-1	{ @include span(1, 12, $gutter); } 
+	    .col-sm-2	{ @include span(2, 12, $gutter); }
+	    .col-sm-3	{ @include span(3, 12, $gutter); }
+	    .col-sm-4	{ @include span(4, 12, $gutter); }
+	    .col-sm-5	{ @include span(5, 12, $gutter); }
+	    .col-sm-6	{ @include span(6, 12, $gutter); }
+	    .col-sm-7	{ @include span(7, 12, $gutter); }
+	    .col-sm-8	{ @include span(8, 12, $gutter); }
+	    .col-sm-9	{ @include span(9, 12, $gutter); }
+	    .col-sm-10	{ @include span(10, 12, $gutter); }
+	    .col-sm-11	{ @include span(11, 12, $gutter); }
+	    .col-sm-12	{ @include span(12, 12, $gutter); }
+	}
+	@media(min-width:$sm-bp) {
+	    .col-md-1	{ @include span(1, 12, $gutter); } 
+	    .col-md-2	{ @include span(2, 12, $gutter); }
+	    .col-md-3	{ @include span(3, 12, $gutter); }
+	    .col-md-4	{ @include span(4, 12, $gutter); }
+	    .col-md-5	{ @include span(5, 12, $gutter); }
+	    .col-md-6	{ @include span(6, 12, $gutter); }
+	    .col-md-7	{ @include span(7, 12, $gutter); }
+	    .col-md-8	{ @include span(8, 12, $gutter); }
+	    .col-md-9	{ @include span(9, 12, $gutter); }
+	    .col-md-10	{ @include span(10, 12, $gutter); }
+	    .col-md-11	{ @include span(11, 12, $gutter); }
+	    .col-md-12	{ @include span(12, 12, $gutter); }
+	}
+	@media(min-width:$md-bp) {
+	    .col-lg-1	{ @include span(1, 12, $gutter); } 
+	    .col-lg-2	{ @include span(2, 12, $gutter); }
+	    .col-lg-3	{ @include span(3, 12, $gutter); }
+	    .col-lg-4	{ @include span(4, 12, $gutter); }
+	    .col-lg-5	{ @include span(5, 12, $gutter); }
+	    .col-lg-6	{ @include span(6, 12, $gutter); }
+	    .col-lg-7	{ @include span(7, 12, $gutter); }
+	    .col-lg-8	{ @include span(8, 12, $gutter); }
+	    .col-lg-9	{ @include span(9, 12, $gutter); }
+	    .col-lg-10	{ @include span(10, 12, $gutter); }
+	    .col-lg-11	{ @include span(11, 12, $gutter); }
+	    .col-lg-12	{ @include span(12, 12, $gutter); }
+	}
+	@media(min-width:$lg-bp) {
+	    .col-xl-1	{ @include span(1, 12, $gutter); } 
+	    .col-xl-2	{ @include span(2, 12, $gutter); }
+	    .col-xl-3	{ @include span(3, 12, $gutter); }
+	    .col-xl-4	{ @include span(4, 12, $gutter); }
+	    .col-xl-5	{ @include span(5, 12, $gutter); }
+	    .col-xl-6	{ @include span(6, 12, $gutter); }
+	    .col-xl-7	{ @include span(7, 12, $gutter); }
+	    .col-xl-8	{ @include span(8, 12, $gutter); }
+	    .col-xl-9	{ @include span(9, 12, $gutter); }
+	    .col-xl-10	{ @include span(10, 12, $gutter); }
+	    .col-xl-11	{ @include span(11, 12, $gutter); }
+	    .col-xl-12	{ @include span(12, 12, $gutter); }
+	}
+	@media(min-width:$xl-bp) {
+	    .col-xxl-1	{ @include span(1, 12, $gutter); } 
+	    .col-xxl-2	{ @include span(2, 12, $gutter); }
+	    .col-xxl-3	{ @include span(3, 12, $gutter); }
+	    .col-xxl-4	{ @include span(4, 12, $gutter); }
+	    .col-xxl-5	{ @include span(5, 12, $gutter); }
+	    .col-xxl-6	{ @include span(6, 12, $gutter); }
+	    .col-xxl-7	{ @include span(7, 12, $gutter); }
+	    .col-xxl-8	{ @include span(8, 12, $gutter); }
+	    .col-xxl-9	{ @include span(9, 12, $gutter); }
+	    .col-xxl-10	{ @include span(10, 12, $gutter); }
+	    .col-xxl-11	{ @include span(11, 12, $gutter); }
+	    .col-xxl-12	{ @include span(12, 12, $gutter); }
+	}
+	@media(min-width:$xxl-bp) {
+	    .col-xxxl-1	{ @include span(1, 12, $gutter); } 
+	    .col-xxxl-2	{ @include span(2, 12, $gutter); }
+	    .col-xxxl-3	{ @include span(3, 12, $gutter); }
+	    .col-xxxl-4	{ @include span(4, 12, $gutter); }
+	    .col-xxxl-5	{ @include span(5, 12, $gutter); }
+	    .col-xxxl-6	{ @include span(6, 12, $gutter); }
+	    .col-xxxl-7	{ @include span(7, 12, $gutter); }
+	    .col-xxxl-8	{ @include span(8, 12, $gutter); }
+	    .col-xxxl-9	{ @include span(9, 12, $gutter); }
+	    .col-xxxl-10	{ @include span(10, 12, $gutter); }
+	    .col-xxxl-11	{ @include span(11, 12, $gutter); }
+	    .col-xxxl-12	{ @include span(12, 12, $gutter); }
+	}
+
+
+	/* Offsets
+	----------------------------------------------------------- */
+	@media (max-width:$sm-bp - 1) {
+	    .offset-col-sm-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-sm-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-sm-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-sm-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-sm-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-sm-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-sm-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-sm-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-sm-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-sm-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-sm-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-sm-12	{ @include offset(12, 12, $gutter); }
+	}
+	@media(min-width:$sm-bp) {
+	    .offset-col-md-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-md-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-md-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-md-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-md-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-md-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-md-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-md-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-md-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-md-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-md-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-md-12	{ @include offset(12, 12, $gutter); }
+	}
+	@media(min-width:$md-bp) {
+	    .offset-col-lg-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-lg-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-lg-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-lg-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-lg-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-lg-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-lg-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-lg-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-lg-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-lg-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-lg-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-lg-12	{ @include offset(12, 12, $gutter); }
+	}
+	@media(min-width:$lg-bp) {
+	    .offset-col-xl-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-xl-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-xl-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-xl-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-xl-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-xl-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-xl-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-xl-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-xl-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-xl-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-xl-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-xl-12	{ @include offset(12, 12, $gutter); }
+	}
+	@media(min-width:$xl-bp) {
+	    .offset-col-xxl-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-xxl-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-xxl-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-xxl-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-xxl-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-xxl-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-xxl-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-xxl-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-xxl-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-xxl-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-xxl-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-xxl-12	{ @include offset(12, 12, $gutter); }
+	}
+	@media(min-width:$xxl-bp) {
+	    .offset-col-xxxl-1	{ @include offset(1, 12, $gutter); } 
+	    .offset-col-xxxl-2	{ @include offset(2, 12, $gutter); }
+	    .offset-col-xxxl-3	{ @include offset(3, 12, $gutter); }
+	    .offset-col-xxxl-4	{ @include offset(4, 12, $gutter); }
+	    .offset-col-xxxl-5	{ @include offset(5, 12, $gutter); }
+	    .offset-col-xxxl-6	{ @include offset(6, 12, $gutter); }
+	    .offset-col-xxxl-7	{ @include offset(7, 12, $gutter); }
+	    .offset-col-xxxl-8	{ @include offset(8, 12, $gutter); }
+	    .offset-col-xxxl-9	{ @include offset(9, 12, $gutter); }
+	    .offset-col-xxxl-10	{ @include offset(10, 12, $gutter); }
+	    .offset-col-xxxl-11	{ @include offset(11, 12, $gutter); }
+	    .offset-col-xxxl-12	{ @include offset(12, 12, $gutter); }
+	}
+}
+
+
+
+
+

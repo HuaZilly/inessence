@@ -1,0 +1,12 @@
+
+a, a:visited { 
+	path {
+		@include transition(.5s);
+	}
+}
+a:hover, a:focus {
+	path {
+	}
+}
+
+

@@ -1,0 +1,48 @@
+.page-id-gift-certificate,.page-id-check-balance{
+
+    input,#bc-gift-purchase-message{
+        background-color: white;
+        &:focus{
+            background-color: white;
+        }
+    }
+
+    .hide-this{
+        display: none !important;
+    }
+
+    #select-amount{
+        position: relative;
+        background-color: white;
+        background-position: -5px right;
+    }
+
+    .logout{
+        a{
+            text-decoration: none;
+        }
+    }
+
+    .generic-page-menu{
+        display: none;
+    }
+
+    .bc-btn.bc-gift-balance-form-submit,.bc-btn.bc-gift-purchase-form-submit{
+        @extend .btn;
+        background-color: $col-black;
+        color: $col-white;
+    }
+
+    .bc-subnav__list{
+        list-style: none;
+        .bc-subnav__list-item {
+            padding-left: 0px;
+            &:before{
+                display: none;
+                
+            }
+        }
+
+    }
+
+}

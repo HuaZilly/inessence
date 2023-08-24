@@ -1,0 +1,232 @@
+
+/* badge
+================================================== */
+
+
+.badge {
+	border-color: $col-mdgrey;
+	background: $col-mdgrey;
+	color: $col-white;
+	@include border-radius(100%);
+	height: 5em;
+	width: 5em;
+	text-align: center;
+	@include box-sizing(border-box);
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.5625rem;
+    line-height: 1;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+	@media screen and (min-width: $md-bp) {
+		font-size: .75em;
+	}
+}
+
+
+/* Buttons
+================================================== */
+button {
+	&:focus {
+		outline: none;
+	}
+}
+.btn,
+a.btn {
+	color: $col-mdgrey;
+	border: solid 1px  $col-mdgrey;
+	@include border-radius(0);
+	display: inline-block;
+	text-align: center;
+	font-size: 0.8125rem;
+    padding: .5rem 0.5rem;
+    min-width: 7rem;
+
+
+	-webkit-tap-highlight-color: transparent;
+	text-decoration: none;
+	cursor: pointer;
+	line-height: normal;
+	@include box-sizing(border-box);
+	@include transition(border-color 0.5s, background-color 0.5s, color .5s);
+	@include user-select(none);
+	-webkit-font-smoothing: antialiased;
+	font-family: 'Roboto', sans-serif;
+
+	font-weight: 400;
+	letter-spacing: 0.058125em;
+	text-transform: uppercase;
+
+
+	//https://developers.google.com/web/fundamentals/input/touch/activestates/index?hl=en
+	//When the user HOVERS over the button
+	&:hover {
+	}
+	//MOUSE - when the user has used the tab key to tab to this button
+	//TOUCH - it’ll be set to focus after the user has tapped it
+	&:focus {
+		outline: none !important;
+	}
+
+	//iOS will use the :hover as the :focus state, so just use them both.
+	//MOUSE - when the user is clicking on it
+	//TOUCH - when the user is touching it
+	&:active {
+	}
+	//fire fox adds an outline to button elements
+	&::-moz-focus-inner {
+		border: 0;
+    }
+
+/*
+    font-size: .6125rem;
+    padding: .5rem .125rem;
+	&.bc-ajax-cart-processing {
+	    font-size: .6125rem;
+	    padding: .5rem .125rem;
+		
+	}
+*/
+	@media screen and (min-width: $md-bp) {
+		padding: .775rem 2.125rem;
+		font-size: 1rem;
+		&.bc-ajax-cart-processing {
+			padding: .775rem 2.125rem;
+			font-size: 1rem;
+		}
+	}
+}
+
+
+/* Buttons styles */
+
+.btn {
+	&.btn-standard {
+		background: transparent;
+		&:hover,
+		&:focus {
+			border-color: $col-black;
+			background: $col-black;
+			color: $col-white;
+			
+		}
+		&.btn-reverse {
+			border-color: #fff;
+			color: #fff;
+			&:hover,
+			&:focus {
+				background: $col-white;
+				color: $col-black;
+				
+			}
+			
+		}
+		
+	}
+	&.btn-checkout {
+		border-color: $col-black;
+		background: $col-black;
+		color: $col-white;
+		width: 100%;
+		padding-left: .2em;
+		padding-right: .2em;
+		&:hover,
+		&:focus {
+			border-color: $col-mdgrey;
+			background: $col-mdgrey;
+			color: $col-white;
+			
+		}
+		
+	}
+
+	&.btn-standard,
+	&.btn-checkout {
+
+		&.btn-disabled,
+		&.btn-disabled:focus,
+		&.btn-disabled:hover {
+			color: #B8B8B8;
+			border-color: #B8B8B8;
+			background: $col-fdgrey;
+			pointer-events: none;
+			cursor: not-allowed;
+		}	
+	}
+}
+
+.top {
+	position: absolute;
+	top:0;
+}
+
+.btn-backtotop {
+	margin: 4em auto;
+}
+.btn-caption {
+	display: block;
+    font-size: .875em;
+    padding: .5em;
+}
+
+
+
+
+
+/* Buttons, input submit and <a> with this class consistent */
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+	@extend .btn;
+}
+
+
+
+
+
+.btn.backtotop {
+	position: fixed;
+	z-index: 10;
+    padding-right: 1em;
+    padding-left: 1em;
+    
+    padding: .5em 1.25em;
+    
+    bottom: 1em;
+    opacity: 0;
+    pointer-events: none;
+	@include transition(.5s);
+	background-image: url(../images/arrow-up.svg);
+	background-position: center center;
+	background-repeat: no-repeat;
+	text-indent: -99999px;
+	overflow: hidden;
+	left: 1em;
+
+    @include background-size( 1em);
+    width: 1em;
+    padding: .5em 1.25em;
+    min-width: 0;
+
+
+
+	&.show {
+		pointer-events: auto;
+		opacity: 1;
+	}
+	@media screen and (min-width: $md-bp) {
+		text-indent: 0;
+		background-image: none;
+		width: 10em;
+	    padding: .775rem 1.125rem;
+	    left: 50%;
+	    margin-left: -5em;
+
+	}
+}

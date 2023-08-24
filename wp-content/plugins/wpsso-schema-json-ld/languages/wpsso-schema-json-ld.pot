@@ -1,0 +1,965 @@
+# Copyright (C) 2021 WPSSO Schema JSON-LD Markup
+# This file is distributed under the same license as the WPSSO Schema JSON-LD Markup package.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPSSO Schema JSON-LD Markup 5.2.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wpsso-schema-json-"
+"ld\n"
+"POT-Creation-Date: 2021-MO-DA HO:MI+ZONE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2021-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+
+#: gettext/gettext-lib-abstracts-com.php:6 lib/abstracts/com/add-on.php:179
+msgid ""
+"The %1$s add-on requires the %2$s plugin - please activate the missing "
+"plugin."
+msgstr ""
+
+#: gettext/gettext-lib-abstracts-com.php:7 lib/abstracts/com/add-on.php:197
+msgid ""
+"The %1$s add-on requires %2$s version %3$s or newer (version %4$s is "
+"currently installed)."
+msgstr ""
+
+#: gettext/gettext-lib-config.php:6
+msgctxt "plugin name"
+msgid "WPSSO Schema JSON-LD Markup"
+msgstr ""
+
+#: gettext/gettext-lib-config.php:7
+msgctxt "plugin description"
+msgid ""
+"Discontinued / deprecated add-on: The features of this plugin were merged "
+"into WPSSO Core v9.0.0."
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:6 gettext/gettext-lib-pro.php:191
+#: lib/pro/admin/edit.php:135 lib/pro/admin/edit.php:1503
+msgctxt "metabox title"
+msgid "Schema JSON-LD Markup / Google Rich Results"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:7 lib/pro/admin/edit.php:139
+msgctxt "option label"
+msgid "Name / Title"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:8 lib/pro/admin/edit.php:146
+msgctxt "option label"
+msgid "Alternate Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:9 gettext/gettext-lib-pro.php:36
+#: gettext/gettext-lib-pro.php:50 lib/pro/admin/edit.php:153
+#: lib/pro/admin/edit.php:366 lib/pro/admin/edit.php:464
+msgctxt "option label"
+msgid "Description"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:10 lib/pro/admin/edit.php:161
+msgctxt "option label"
+msgid "Microdata Type URLs"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:11 lib/pro/admin/edit.php:169
+msgctxt "option label"
+msgid "Same-As URLs"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:12 lib/pro/admin/edit.php:182
+msgctxt "metabox title"
+msgid "Creative Work Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:13 lib/pro/admin/edit.php:187
+msgctxt "option label"
+msgid "Is Part of URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:14 lib/pro/admin/edit.php:195
+msgctxt "option label"
+msgid "Headline"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:15 lib/pro/admin/edit.php:203
+msgctxt "option label"
+msgid "Full Text"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:16 lib/pro/admin/edit.php:211
+msgctxt "option label"
+msgid "Keywords"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:17 lib/pro/admin/edit.php:219
+msgctxt "option label"
+msgid "Language"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:18 lib/pro/admin/edit.php:227
+msgctxt "option label"
+msgid "Family Friendly"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:19 lib/pro/admin/edit.php:235
+msgctxt "option label"
+msgid "Copyright Year"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:20 lib/pro/admin/edit.php:242
+msgctxt "option label"
+msgid "License URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:21 lib/pro/admin/edit.php:249
+msgctxt "option label"
+msgid "Publisher Org."
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:22 lib/pro/admin/edit.php:257
+msgctxt "option label"
+msgid "Publisher Person"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:23 lib/pro/admin/edit.php:267
+msgctxt "option label"
+msgid "Service Prov. Org."
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:24 lib/pro/admin/edit.php:275
+msgctxt "option label"
+msgid "Service Prov. Person"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:25 lib/pro/admin/edit.php:290
+msgctxt "metabox title"
+msgid "Audiobook Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:26 lib/pro/admin/edit.php:295
+msgctxt "option label"
+msgid "Duration"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:27 lib/pro/admin/edit.php:307
+msgctxt "metabox title"
+msgid "How-To Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:28 lib/pro/admin/edit.php:312
+msgctxt "option label"
+msgid "How-To Makes"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:29 gettext/gettext-lib-pro.php:43
+#: lib/pro/admin/edit.php:319 lib/pro/admin/edit.php:418
+msgctxt "option label"
+msgid "Preparation Time"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:30 gettext/gettext-lib-pro.php:45
+#: lib/pro/admin/edit.php:326 lib/pro/admin/edit.php:432
+msgctxt "option label"
+msgid "Total Time"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:31 lib/pro/admin/edit.php:333
+msgctxt "option label"
+msgid "How-To Supplies"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:32 lib/pro/admin/edit.php:341
+msgctxt "option label"
+msgid "How-To Tools"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:33 lib/pro/admin/edit.php:349
+msgctxt "option label"
+msgid "How-To Steps"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:34 lib/pro/admin/edit.php:355
+msgctxt "option label"
+msgid "%1$s How-To Step or %2$s Step Group / Section:"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:35 gettext/gettext-lib-pro.php:49
+#: lib/pro/admin/edit.php:361 lib/pro/admin/edit.php:459
+msgctxt "option label"
+msgid "Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:37 gettext/gettext-lib-pro.php:51
+#: gettext/gettext-lib-pro.php:193 lib/pro/admin/edit.php:371
+#: lib/pro/admin/edit.php:469 lib/pro/admin/edit.php:1514
+msgctxt "option label"
+msgid "Image ID"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:38 lib/pro/admin/edit.php:385
+msgctxt "metabox title"
+msgid "Recipe Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:39 lib/pro/admin/edit.php:390
+msgctxt "option label"
+msgid "Recipe Cuisine"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:40 lib/pro/admin/edit.php:397
+msgctxt "option label"
+msgid "Recipe Course"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:41 lib/pro/admin/edit.php:404
+msgctxt "option label"
+msgid "Recipe Makes"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:42 lib/pro/admin/edit.php:411
+msgctxt "option label"
+msgid "Cooking Method"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:44 lib/pro/admin/edit.php:425
+msgctxt "option label"
+msgid "Cooking Time"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:46 lib/pro/admin/edit.php:439
+msgctxt "option label"
+msgid "Recipe Ingredients"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:47 lib/pro/admin/edit.php:447
+msgctxt "option label"
+msgid "Recipe Instructions"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:48 lib/pro/admin/edit.php:453
+msgctxt "option label"
+msgid "%1$s Recipe Instruction or %2$s Instruction Group / Section:"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:52 lib/pro/admin/edit.php:483
+msgctxt "metabox title"
+msgid "Nutrition Information per Serving"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:53 lib/pro/admin/edit.php:488
+msgctxt "option label"
+msgid "Serving Size"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:54 lib/pro/admin/edit.php:495
+msgctxt "option label"
+msgid "Calories"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:55 lib/pro/admin/edit.php:498
+msgctxt "option comment"
+msgid "calories"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:56 lib/pro/admin/edit.php:503
+msgctxt "option label"
+msgid "Protein"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:57 lib/pro/admin/edit.php:506
+msgctxt "option comment"
+msgid "grams of protein"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:58 lib/pro/admin/edit.php:511
+msgctxt "option label"
+msgid "Fiber"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:59 lib/pro/admin/edit.php:514
+msgctxt "option comment"
+msgid "grams of fiber"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:60 lib/pro/admin/edit.php:519
+msgctxt "option label"
+msgid "Carbohydrates"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:61 lib/pro/admin/edit.php:522
+msgctxt "option comment"
+msgid "grams of carbohydrates"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:62 lib/pro/admin/edit.php:527
+msgctxt "option label"
+msgid "Sugar"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:63 lib/pro/admin/edit.php:530
+msgctxt "option comment"
+msgid "grams of sugar"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:64 lib/pro/admin/edit.php:535
+msgctxt "option label"
+msgid "Sodium"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:65 lib/pro/admin/edit.php:538
+msgctxt "option comment"
+msgid "milligrams of sodium"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:66 lib/pro/admin/edit.php:543
+msgctxt "option label"
+msgid "Fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:67 lib/pro/admin/edit.php:546
+msgctxt "option comment"
+msgid "grams of fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:68 lib/pro/admin/edit.php:551
+msgctxt "option label"
+msgid "Saturated Fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:69 lib/pro/admin/edit.php:554
+msgctxt "option comment"
+msgid "grams of saturated fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:70 lib/pro/admin/edit.php:559
+msgctxt "option label"
+msgid "Unsaturated Fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:71 lib/pro/admin/edit.php:562
+msgctxt "option comment"
+msgid "grams of unsaturated fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:72 lib/pro/admin/edit.php:567
+msgctxt "option label"
+msgid "Trans Fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:73 lib/pro/admin/edit.php:570
+msgctxt "option comment"
+msgid "grams of trans fat"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:74 lib/pro/admin/edit.php:575
+msgctxt "option label"
+msgid "Cholesterol"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:75 lib/pro/admin/edit.php:578
+msgctxt "option comment"
+msgid "milligrams of cholesterol"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:76 lib/pro/admin/edit.php:588
+msgctxt "metabox title"
+msgid "Movie Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:77 lib/pro/admin/edit.php:593
+msgctxt "option label"
+msgid "Cast Names"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:78 lib/pro/admin/edit.php:601
+msgctxt "option label"
+msgid "Director Names"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:79 lib/pro/admin/edit.php:609
+msgctxt "option label"
+msgid "Production Company"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:80 lib/pro/admin/edit.php:617
+msgctxt "option label"
+msgid "Movie Runtime"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:81 lib/pro/admin/edit.php:629
+msgctxt "metabox title"
+msgid "Review Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:82 lib/pro/admin/edit.php:634
+msgctxt "option label"
+msgid "Review Rating"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:83 lib/pro/admin/edit.php:637
+msgctxt "option comment"
+msgid "from"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:84 lib/pro/admin/edit.php:639
+msgctxt "option comment"
+msgid "to"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:85 lib/pro/admin/edit.php:645
+msgctxt "option label"
+msgid "Rating Value Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:86 lib/pro/admin/edit.php:657
+msgctxt "metabox title"
+msgid "Subject of the Review"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:87 lib/pro/admin/edit.php:662
+msgctxt "option label"
+msgid "Subject Webpage Type"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:88 lib/pro/admin/edit.php:677
+msgctxt "option label"
+msgid "Subject Webpage URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:89 lib/pro/admin/edit.php:684
+msgctxt "option label"
+msgid "Subject Same-As URLs"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:90 lib/pro/admin/edit.php:692
+msgctxt "option label"
+msgid "Subject Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:91 lib/pro/admin/edit.php:699
+msgctxt "option label"
+msgid "Subject Description"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:92 lib/pro/admin/edit.php:706
+msgctxt "option label"
+msgid "Subject Image ID"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:93 gettext/gettext-lib-pro.php:194
+#: lib/pro/admin/edit.php:713 lib/pro/admin/edit.php:1520
+msgctxt "option label"
+msgid "or an Image URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:94 lib/pro/admin/edit.php:725
+msgctxt "metabox title"
+msgid "Creative Work Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:95 lib/pro/admin/edit.php:730
+msgctxt "option label"
+msgid "C.W. Author Type"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:96 lib/pro/admin/edit.php:737
+msgctxt "option label"
+msgid "C.W. Author Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:97 lib/pro/admin/edit.php:744
+msgctxt "option label"
+msgid "C.W. Author URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:98 lib/pro/admin/edit.php:751
+msgctxt "option label"
+msgid "C.W. Published Date"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:99 lib/pro/admin/edit.php:758
+msgctxt "option label"
+msgid "C.W. Created Date"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:100 lib/pro/admin/edit.php:770
+msgctxt "metabox title"
+msgid "Book Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:101 lib/pro/admin/edit.php:775
+msgctxt "option label"
+msgid "Book ISBN"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:102 lib/pro/admin/edit.php:788
+msgctxt "metabox title"
+msgid "Movie Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:103 lib/pro/admin/edit.php:793
+msgctxt "option label"
+msgid "Movie Cast Names"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:104 lib/pro/admin/edit.php:801
+msgctxt "option label"
+msgid "Movie Director Names"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:105 lib/pro/admin/edit.php:814
+msgctxt "metabox title"
+msgid "Product Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:106 gettext/gettext-lib-pro.php:167
+#: lib/pro/admin/edit.php:819 lib/pro/admin/edit.php:1317
+msgctxt "option label"
+msgid "Product Brand"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:107 lib/pro/admin/edit.php:826
+msgctxt "option label"
+msgid "Product Offers"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:108 lib/pro/admin/edit.php:830
+msgctxt "option label"
+msgid "Product Offer Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:109 lib/pro/admin/edit.php:836
+msgctxt "option label"
+msgid "Product Offer Price"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:110 lib/pro/admin/edit.php:842
+msgctxt "option label"
+msgid "Product Offer Currency"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:111 lib/pro/admin/edit.php:852
+msgctxt "option label"
+msgid "Product Offer Availability"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:112 gettext/gettext-lib-pro.php:183
+#: lib/pro/admin/edit.php:865 lib/pro/admin/edit.php:1428
+msgctxt "option label"
+msgid "Product SKU"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:113 gettext/gettext-lib-pro.php:184
+#: lib/pro/admin/edit.php:872 lib/pro/admin/edit.php:1435
+msgctxt "option label"
+msgid "Product MPN"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:114 lib/pro/admin/edit.php:884
+msgctxt "metabox title"
+msgid "Software App Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:115 gettext/gettext-lib-pro.php:126
+#: lib/pro/admin/edit.php:889 lib/pro/admin/edit.php:975
+msgctxt "option label"
+msgid "Operating System"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:116 gettext/gettext-lib-pro.php:127
+#: lib/pro/admin/edit.php:896 lib/pro/admin/edit.php:982
+msgctxt "option label"
+msgid "Application Category"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:117 lib/pro/admin/edit.php:903
+msgctxt "option label"
+msgid "Software App Offers"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:118 lib/pro/admin/edit.php:907
+msgctxt "option label"
+msgid "Software App Offer Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:119 lib/pro/admin/edit.php:913
+msgctxt "option label"
+msgid "Software App Offer Price"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:120 lib/pro/admin/edit.php:919
+msgctxt "option label"
+msgid "Software App Offer Currency"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:121 lib/pro/admin/edit.php:929
+msgctxt "option label"
+msgid "Software App Offer Availability"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:122 lib/pro/admin/edit.php:946
+msgctxt "metabox title"
+msgid "Claim Subject Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:123 lib/pro/admin/edit.php:951
+msgctxt "option label"
+msgid "Short Summary of Claim"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:124 lib/pro/admin/edit.php:958
+msgctxt "option label"
+msgid "First Appearance URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:125 lib/pro/admin/edit.php:970
+msgctxt "metabox title"
+msgid "Software Application Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:128 lib/pro/admin/edit.php:994
+msgctxt "metabox title"
+msgid "QA Page Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:129 lib/pro/admin/edit.php:999
+msgctxt "option label"
+msgid "QA Heading"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:130 lib/pro/admin/edit.php:1011
+msgctxt "metabox title"
+msgid "Event Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:131 lib/pro/admin/edit.php:1016
+msgctxt "option label"
+msgid "Event Language"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:132 lib/pro/admin/edit.php:1023
+msgctxt "option label"
+msgid "Event Attendance"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:133 lib/pro/admin/edit.php:1031
+msgctxt "option label"
+msgid "Event Online URL"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:134 lib/pro/admin/edit.php:1038
+msgctxt "option label"
+msgid "Event Physical Venue"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:135 lib/pro/admin/edit.php:1046
+msgctxt "option label"
+msgid "Organizer Org."
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:136 lib/pro/admin/edit.php:1054
+msgctxt "option label"
+msgid "Organizer Person"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:137 lib/pro/admin/edit.php:1064
+msgctxt "option label"
+msgid "Performer Org."
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:138 lib/pro/admin/edit.php:1072
+msgctxt "option label"
+msgid "Performer Person"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:139 lib/pro/admin/edit.php:1082
+msgctxt "option label"
+msgid "Event Status"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:140 lib/pro/admin/edit.php:1090
+msgctxt "option label"
+msgid "Event Start"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:141 lib/pro/admin/edit.php:1097
+msgctxt "option label"
+msgid "Event End"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:142 lib/pro/admin/edit.php:1104
+msgctxt "option label"
+msgid "Event Previous Start"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:143 lib/pro/admin/edit.php:1111
+msgctxt "option label"
+msgid "Event Offers Start"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:144 lib/pro/admin/edit.php:1118
+msgctxt "option label"
+msgid "Event Offers End"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:145 lib/pro/admin/edit.php:1125
+msgctxt "option label"
+msgid "Event Offers"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:146 lib/pro/admin/edit.php:1129
+msgctxt "option label"
+msgid "Event Offer Name"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:147 lib/pro/admin/edit.php:1134
+msgctxt "option label"
+msgid "Event Offer Price"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:148 lib/pro/admin/edit.php:1139
+msgctxt "option label"
+msgid "Event Offer Currency"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:149 lib/pro/admin/edit.php:1148
+msgctxt "option label"
+msgid "Event Offer Availability"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:150 lib/pro/admin/edit.php:1165
+msgctxt "metabox title"
+msgid "Job Posting Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:151 lib/pro/admin/edit.php:1170
+msgctxt "option label"
+msgid "Job Title"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:152 lib/pro/admin/edit.php:1177
+msgctxt "option label"
+msgid "Hiring Organization"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:153 lib/pro/admin/edit.php:1185
+msgctxt "option label"
+msgid "Job Location"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:154 lib/pro/admin/edit.php:1193
+msgctxt "option label"
+msgid "Job Location Type"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:155 lib/pro/admin/edit.php:1201
+msgctxt "option label"
+msgid "Base Salary"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:156 lib/pro/admin/edit.php:1208
+msgctxt "option comment"
+msgid "per"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:157 lib/pro/admin/edit.php:1214
+msgctxt "option label"
+msgid "Employment Type"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:158 lib/pro/admin/edit.php:1221
+msgctxt "option label"
+msgid "Job Posting Expires"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:159 lib/pro/admin/edit.php:1233
+msgctxt "metabox title"
+msgid "Organization Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:160 lib/pro/admin/edit.php:1238
+msgctxt "option label"
+msgid "Select an Organization"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:161 lib/pro/admin/edit.php:1251
+msgctxt "metabox title"
+msgid "Person Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:162 lib/pro/admin/edit.php:1256
+msgctxt "option label"
+msgid "Select a Person"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:163 lib/pro/admin/edit.php:1271
+msgctxt "metabox title"
+msgid "Place Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:164 lib/pro/admin/edit.php:1276
+msgctxt "option label"
+msgid "Select a Place"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:165 lib/pro/admin/edit.php:1292
+msgctxt "metabox title"
+msgid "Product Information"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:166 lib/pro/admin/edit.php:1302
+msgctxt "option label"
+msgid "Product Type"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:168 lib/pro/admin/edit.php:1324
+msgctxt "option label"
+msgid "Product Price"
+msgstr ""
+
+#. translators: Please ignore - translation uses a different text domain.
+#: gettext/gettext-lib-pro.php:170 lib/pro/admin/edit.php:1330
+msgid "for simple or main product"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:171 lib/pro/admin/edit.php:1335
+msgctxt "option label"
+msgid "Product Availability"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:172 lib/pro/admin/edit.php:1343
+msgctxt "option label"
+msgid "Product Condition"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:173 lib/pro/admin/edit.php:1351
+msgctxt "option label"
+msgid "Product Material"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:174 lib/pro/admin/edit.php:1358
+msgctxt "option label"
+msgid "Product Color"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:175 lib/pro/admin/edit.php:1365
+msgctxt "option label"
+msgid "Product Target Gender"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:176 lib/pro/admin/edit.php:1373
+msgctxt "option label"
+msgid "Product Size"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:177 lib/pro/admin/edit.php:1380
+msgctxt "option label"
+msgid "Product Weight"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:178 lib/pro/admin/edit.php:1388
+msgctxt "option label"
+msgid "Product Length"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:179 lib/pro/admin/edit.php:1396
+msgctxt "option label"
+msgid "Product Width"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:180 lib/pro/admin/edit.php:1404
+msgctxt "option label"
+msgid "Product Height"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:181 lib/pro/admin/edit.php:1412
+msgctxt "option label"
+msgid "Product Depth"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:182 lib/pro/admin/edit.php:1420
+msgctxt "option label"
+msgid "Product Fluid Volume"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:185 lib/pro/admin/edit.php:1442
+msgctxt "option label"
+msgid "Product GTIN-14"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:186 lib/pro/admin/edit.php:1449
+msgctxt "option label"
+msgid "Product GTIN-13 (EAN)"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:187 lib/pro/admin/edit.php:1456
+msgctxt "option label"
+msgid "Product GTIN-12 (UPC)"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:188 lib/pro/admin/edit.php:1463
+msgctxt "option label"
+msgid "Product GTIN-8"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:189 lib/pro/admin/edit.php:1470
+msgctxt "option label"
+msgid "Product GTIN"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:190 lib/pro/admin/edit.php:1477
+msgctxt "option label"
+msgid "Product ISBN"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:192 lib/pro/admin/edit.php:1508
+msgctxt "option label"
+msgid "Maximum Images"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:195 lib/pro/admin/edit.php:1538
+msgctxt "option comment"
+msgid "days"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:196 lib/pro/admin/edit.php:1539
+msgctxt "option comment"
+msgid "hours"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:197 lib/pro/admin/edit.php:1540
+msgctxt "option comment"
+msgid "mins"
+msgstr ""
+
+#: gettext/gettext-lib-pro.php:198 lib/pro/admin/edit.php:1541
+msgctxt "option comment"
+msgid "secs"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "WPSSO Schema JSON-LD Markup"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://wpsso.com/extend/plugins/wpsso-schema-json-ld/"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Google Rich Results with JSON-LD structured data for Articles, Carousels, "
+"Events, FAQ pages, How-tos, Local SEO, Products, Recipes, Ratings, Reviews, "
+"and more."
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "JS Morisset"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://wpsso.com/"
+msgstr ""

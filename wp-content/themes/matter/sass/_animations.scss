@@ -1,0 +1,129 @@
+html {
+	scroll-behavior: smooth;
+}
+
+
+/* 1. Set the keyframes 
+============================================ */
+
+
+//Fade in
+@-webkit-keyframes fadein { 
+    0%,50%		{opacity: 0;} 
+    100% 		{opacity: 1;} 
+}
+@-moz-keyframes fadein { 
+    0%,50%		{opacity: 0;} 
+    100% 		{opacity: 1;} 
+}
+@-o-keyframes fadein { 
+    0%,50%		{opacity: 0;} 
+    100% 		{opacity: 1;} 
+}
+@keyframes fadein {
+    0%,50%		{opacity: 0;} 
+    100% 		{opacity: 1;} 
+}
+
+
+
+/* 2. Add it to the class
+
+	Arguments:::
+	
+    animation-name: 			the name of the animation;
+    animation-duration: 		how long the keyframes will take to go from 0% to 100%;
+    animation-timing-function:	the speed from start to end (linier, ease [slow start, then ends fast]  linear, easing OR USE http://cubic-bezier.com/#0,.67,.75,.9;
+    animation-delay: 			the delay beofore it animates;
+    animation-iteration-count:	the number of times it plays;
+    animation-direction:		;
+	animation-fill-mode
+	animation-play-state
+
+
+
+
+	Example ::
+
+	animation-name: bounce;
+	animation-duration: 4s;
+	animation-timing-function: ease-out;
+	animation-delay: 2s;
+	animation-iteration-count: 10;
+	animation-direction: alternate;
+	animation-fill-mode: forwards;
+ 
+ 
+	Example - infinte loop::
+	
+	
+	Example - play once only (one load, fade in)
+ 
+
+============================================ */
+
+@mixin animate ($animation){
+	-webkit-animation: $animation; 
+	-moz-animation: $animation; 
+	-o-animation: $animation; 
+	-ms-animation: $animation; 
+	animation: $animation; 	
+}
+
+
+.bounce {
+	@include animate(bounce 2s linear 4s infinite alternate);
+}
+.fadein {
+	@include animate(fadein .5s);
+
+}
+
+
+
+/* fade in an up
+============================================ */
+
+.fadeinstill {
+	@include transition(opacity 1s);
+	opacity: 0;
+	&.active {
+		opacity: 1;
+	}	
+}
+.fadeinandup {
+	@include transition(opacity 1s, transform 1s);
+	opacity: 0;
+	@include transform(translateY(3em));	
+	&.waitafterimg {
+		@include transition-delay(.5s);	
+		
+	}
+	&.active {
+		opacity: 1;
+		@include transform(translateY(0em));	
+		
+	}
+}
+.fadeinfromleft,
+.fadeinfromright {
+	@include transition(opacity 1s, transform .5s cubic-bezier(0.645, 0.045, 0.355, 1));
+}
+
+.fadeinfromleft {
+	@include transform(translateX(3em));	
+	&.active {
+		opacity: 1;
+		@include transform(translateX(0em));	
+		
+	}
+}
+
+.fadeinfromright {
+	@include transform(translateX(-3em));	
+	&.active {
+		opacity: 1;
+		@include transform(translateX(0em));	
+		
+	}
+}

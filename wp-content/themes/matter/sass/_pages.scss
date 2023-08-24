@@ -1,0 +1,946 @@
+@import "./pages/gift-certificate";
+
+/* Home
+====================================================== */
+
+.home {
+	@media screen and (min-width: $md-bp) {
+		.product-link .heading {
+			min-height: 0;
+		}
+	}	
+}
+
+
+.page-id-home {
+	.about_section_home {
+	    margin-top: 5em;
+	    
+		h5 {
+			margin-bottom: .25em;
+			
+		}
+		p {
+			margin-top: 0;
+		}
+	}
+
+	.box-image-left,
+	.box-image-right {
+		.heading {
+	        margin-bottom: .7em;
+		}
+
+		@media screen and (min-width: $md-bp) {
+		    min-height: 23em;
+		    .heading {
+				margin-top: .85em;			    
+		    }
+		    .row {
+			    min-height: 23em;
+		    }
+		}
+	}
+	.expand {
+	    display: none;
+	}
+	
+}
+
+
+
+
+/* Our Story 
+====================================================== */
+
+.page-id-our-story {
+	.category-banner {
+		    margin-bottom: 3.5em;
+	}
+
+}
+
+
+
+
+/* Product page variations
+------------------------------------------ */
+
+.single-bigcommerce_product {
+
+	.bc-product-variant__label--rectangle {
+		height: auto;
+	}	
+	.bc-product-form__control--rectangle input.bc-product-variant__radio--hidden:checked+.bc-product-variant__label .bc-product-variant__label--rectangle {
+		color: $col-black;
+		border-color: $col-black;
+	}
+	.bc-product-form__control--swatch input.bc-product-variant__radio--hidden:checked+.bc-product-variant__label .bc-product-variant__label--swatch {
+		border:5px solid transparent;
+	}
+}
+
+/* product page
+====================================================== */
+
+.single-bigcommerce_product {
+	.bc-product-single {
+	    max-width: none;
+	    padding: 0;
+	    margin: 0 auto;	
+	}
+}
+
+
+
+.entry-content .product-page-description {
+	position: relative;
+    padding-bottom: 2em;
+    background: #FFF;
+    @include box-sizing(border-box);
+   	.bc-product__title {
+		margin: 0;
+		font-size: 1.75em;
+		width: 90%;
+	    line-height: 1.2;
+	}
+	.rating {
+	    margin: 1.15em 0 0 0;		
+	}
+	.product-review-links {
+		display: block;
+		font-size: .875em;
+		a {
+			text-decoration: underline;
+		}
+	}
+	p {
+		color: $col-mdgrey;
+	}
+	a.bc-link.bc-single-product__reviews-anchor {
+	    display: none;
+	}
+	button.bc-btn.bc-pdp-wish-list-toggle {
+		@extend .savetowishlist;
+	}
+	.product-price {
+	    font-size: 1.5em;
+	    del {
+	        font-size: .8em;
+	    }
+	}
+	.bc-product__out_of_stock {
+		display: none;	
+	}
+	.payment-options {
+		span {
+		    font-size: .875em;
+		    display: block;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+	.bc-btn.bc-btn--view-product,
+	.bc-btn.bc-btn--form-submit.bc-btn--add_to_cart {
+		@extend .btn;
+		@extend .btn-checkout;
+		color: #FFF !important;
+		
+	}
+
+	.btn-wrap {
+		text-align: center;
+	}
+	@media(min-width:$sm-bp) {
+
+	    padding-bottom: 0em;
+		border: solid .5px #B8B8B8;
+		padding: 1.5em 1.80em 2em;
+		.bc-product__title {
+// 		    width: 60%;
+		
+		}
+		p {
+			margin-bottom: .75em;
+		}
+	}
+	@media(min-width:$lg-bp) {
+		.bc-btn.bc-btn--view-product,
+		.bc-btn.bc-btn--form-submit.bc-btn--add_to_cart {
+/*
+			font-size: .875em;
+		    padding-top: 1em;
+		    padding-bottom: 1em;
+*/
+		}
+	}
+	@media(min-width:$xl-bp) {
+	    &.fixed {
+		    position: fixed;
+	    }
+	    opacity:0;
+	    @include transition(opacity .5s);
+	    &.show {
+		    opacity: 1;
+	    }
+	}
+	.truncate {
+		margin: 10px 0;
+	}
+	.bc-product__price--sale {
+		color: #c12b2b;
+	}
+	.bc-product__pricing--visible {
+		margin-bottom: 0
+	}
+	.payment-options {
+		margin: 10px 0;
+		.afterpay {
+			width: 100%;
+			padding-right: 0;
+			margin-right: 0;
+			span {
+				display: inline-block !important;
+				font-size: 15px;
+			}
+			img {
+				width: 95px;
+				vertical-align: middle;
+			}
+		}
+	}
+	.bc-product-form__quantity.quantity-selector {
+		justify-content: left;
+		padding: 0;
+		margin-bottom: 15px;
+		width: 50%;
+	}
+	.bc-product-form {
+		margin-top: 10px;
+		.bc-btn--form-submit.bc-btn--add_to_cart {
+			padding: 1rem;
+		}
+	}
+	.form-container {
+		display: inline-block;
+		* {
+			display: none;
+		}
+		.bc-pdp-wish-list-wrapper {
+			display: block;
+			.bc-pdp-wish-list-toggle {
+				padding: 0 0 0 30px;
+				background-size: 20px;
+			}
+		}
+	}
+	.wishlist-container {
+		display: flex;
+		align-items: center;
+		margin-top: 10px;
+		flex-wrap: wrap;
+		[data-bv-show="rating_summary"] {
+			display: inline-block;
+			>.bv_main_container{
+				>div.bv_main_container_row_flex{
+					padding-right: 0 !important;
+				}
+			}
+		}
+	}
+	.form-bottom {
+		.bc-pdp-wish-list-wrapper {
+			display: none;
+		}
+	}
+	@media(max-width: $sm-bp - 1 ) {
+		.form-bottom {
+			.bc-btn--add_to_cart,
+			.bc-product-form__quantity.quantity-selector {
+				width: 100%;
+			}
+		}
+		.bc-product-form {
+			.bc-btn--form-submit.bc-btn--add_to_cart {
+				width: 100%;
+			}
+		}
+		.wishlist-container {
+			flex-wrap: wrap;
+			.form-container {
+				width: 100%;
+				.bc-pdp-wish-list-wrapper {
+					text-align: left;
+				}
+			}
+		}
+	}
+}
+.entry-content .product-page-description {
+
+	@media(max-width:$xl-bp - 1 ) {
+		top: auto !important;
+	}
+}
+
+.product-page-description-spacer {
+	display: none;	
+	@media(min-width:$xl-bp) {
+		display: block;
+	}
+}
+
+.payment-options {
+    display: flex;
+    margin: 1.9em 0;
+	.option {
+	    padding-right: 1.0em;
+	    border-right: solid 1px;
+	    margin-right: 1.0em;
+	}
+	
+	.option:last-child {
+	    margin-right: 0;
+	    border-right: none;
+	    padding-right: 0;
+	}
+	@media(min-width:$sm-bp) {
+		.option {
+		    padding-right: 1.5em;
+		    margin-right: 1.5em;
+		}
+
+	}
+
+}
+
+
+
+
+
+.image-switcher-wrap {
+	position: relative;
+	.badges {
+		position: absolute;
+		top:0em;
+		right: 0em;
+		z-index: 8;
+		> * {
+			margin-bottom: .5em;
+			width: 3rem;
+			height: 3rem;
+			line-height: 3rem;
+			font-size: .8rem;
+			display: block;
+
+		}
+	}
+	@media(min-width:$sm-bp) {
+		.badges {
+			top:2em;
+			right: 2em;
+		}
+	}
+	@media(min-width:$md-bp) {
+		.badges {
+			> * {
+				width: 3.75rem;
+				height: 3.75rem;
+				line-height: 3.75rem;
+			
+			}	
+			.badge{
+				line-height: 1.1rem !important;
+    			display: flex;
+			}
+		}
+	}
+}
+
+.single-bigcommerce_product {
+	.square-feature-boxes {
+		margin-top: 7em;	
+		margin-bottom: 7em;	
+	}	
+
+
+	.footer-wrapper {
+	    padding-bottom: 14em;
+	}
+	@media screen and (min-width: $md-bp) {
+		.footer-wrapper {
+		    padding-bottom: 7em;
+		}
+	}
+}
+
+
+/* sleep sanctuary
+====================================================== */
+
+.page-id-sleep-sanctuary {
+	
+
+	.feature-swiper-title {
+		@media screen and (min-width: $md-bp) {
+			margin-top: 3.5em;
+		}
+	}
+}
+
+
+/* meet our expert
+====================================================== */
+
+.page-id-meet-our-expert {
+	.category-banner {
+		    margin-bottom: 3.5em;
+	}
+
+	
+}
+/* how to use
+====================================================== */
+
+
+.page-id-how-to-use {
+	@media screen and (min-width: $md-bp){
+		.box-image-left .row, 
+		.box-image-right .row {
+		    min-height: 38em;
+		}
+	}	
+}
+
+/* finest harvest
+====================================================== */
+
+.page-id-the-finest-harvest {
+	.category-banner {
+		    margin-bottom: 3.5em;
+	}	
+	.box-image-right  {
+		    margin-bottom: 3.5em;
+		
+	}
+}
+
+/* blog
+====================================================== */
+
+.blog {
+	.subscribe-form-wrap {
+	    margin-top: 3em;	
+		@media(min-width:$md-bp) {
+			margin-top: 6em;
+		}
+	}
+	.category-banner .content {
+		max-width: none;
+	}
+	.product-link {
+		padding-top: 0;
+		padding-bottom: 5em;
+		.heading {
+			margin-bottom: .5em;
+		}
+	}
+}
+
+/* login/register
+====================================================== */
+.bc-account-page {
+	&.hide {
+		display: none;
+	}
+}
+
+
+.account-page-title {
+	margin-bottom: 1.75em;
+}
+.page-id-register-2,
+.page-id-register,
+.page-id-login {
+	
+	.client-entry {
+		padding-bottom: 0;	
+	}
+	
+	.bc-account-page {
+		border: none;
+	}
+	.bc-account-login__form {
+		background: #FFF;
+		border: solid .5px #B8B8B8;
+	}
+	
+}
+
+
+.login-box {
+    margin: 4em auto;
+   	background: #FFF;
+	border: solid .5px #B8B8B8;
+    max-width: 27.5em;
+    
+    
+    padding: 1.25em 1.5em 3.25em;
+    a {
+	    text-decoration: underline;
+	    &:focus,
+	    &:hover {
+		    text-decoration: none;
+	    }
+    }
+	.smartplaceholder {
+		width: 100%;
+		margin-top: 2.25em;
+		> * {
+			width: 100%;
+		}
+	}
+	.intro {
+		text-align: center;
+	}
+	.form-bottom {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: center;		
+		flex-wrap: wrap;
+		margin-top: 2em;
+	    .btn {
+			margin-top: 2.75em;
+	        width: 100%;
+
+
+	    }
+	}
+
+	@media screen and (min-width: $md-bp){
+		padding: 1.25em 6.25em 4.25em 6.25em;
+	}
+}
+.full-registration-form-wrap {
+    width: 100%;
+	margin: 4em auto 4em;
+	&.hide {
+		display: none;
+	}
+
+	.bc-account-page {
+	    padding: 1rem !important;
+	}
+
+	.intro {
+		text-align: center;
+	}
+   	background: #FFF;
+	border: solid .5px #B8B8B8;
+	.bc-btn.bc-btn--register {
+		@extend .btn;
+		@extend .btn-checkout;
+	}
+	@media screen and (min-width: $md-bp){
+	    width: 58%;
+
+		.bc-account-page {
+		    padding: 1em 4em 3em 4em!important;
+		}
+
+	}
+}
+
+/* BC Override
+-------------------------------------------------- */
+
+
+.bc-account-login {
+	justify-content: center;
+	.intro {
+		text-align: center;
+		padding: 3em 0 1em;
+		p {
+			margin: 0;
+		}
+	}
+	
+}
+.bc-account-login__form-inner, 
+.bc-account-login__form form {
+	margin:auto;	
+}
+.bc-account-login__form-inner {
+	input[type="password"],
+	input[type="text"] {
+		width: 100%;
+		
+	}
+	
+}
+
+
+
+.bc-account-login__form {
+	
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-bottom: 0 !important;
+	padding-bottom: 1.75em;
+	p.login-password, 
+	p.login-username {
+	    margin-bottom: 2em;
+	}	
+	p.login-remember {
+		display: flex;
+	    justify-content: space-between;
+		
+	}
+	&.hide {
+		display: none;
+	}
+	button.bc-btn,
+	input[type="submit"],
+	.btn {
+		color: $col-mdgrey !important;
+		border: solid .5px  $col-mdgrey !important;
+		@include border-radius(0);
+		display: inline-block;
+		text-align: center;
+		font-size: 1em !important;
+			padding: .75em 2.125em !important;
+		-webkit-tap-highlight-color: transparent;
+		text-decoration: none;
+		cursor: pointer;
+		line-height: normal;
+		@include box-sizing(border-box);
+		@include transition(border-color 0.5s, background-color 0.5s, color .5s);
+		@include user-select(none);
+		-webkit-font-smoothing: antialiased;
+		font-family: 'Roboto', sans-serif !important;
+	
+		font-weight: 400 !important;
+		letter-spacing: 0.058125em !important;
+		text-transform: uppercase;
+	
+	
+		//https://developers.google.com/web/fundamentals/input/touch/activestates/index?hl=en
+		//When the user HOVERS over the button
+		&:hover {
+		}
+		//MOUSE - when the user has used the tab key to tab to this button
+		//TOUCH - it’ll be set to focus after the user has tapped it
+		&:focus {
+			outline: none !important;
+		}
+	
+		//iOS will use the :hover as the :focus state, so just use them both.
+		//MOUSE - when the user is clicking on it
+		//TOUCH - when the user is touching it
+		&:active {
+		}
+		//fire fox adds an outline to button elements
+		&::-moz-focus-inner {
+			border: 0;
+	    }
+
+		border-color: $col-black !important;
+		background: $col-black !important;
+		color: $col-white !important;
+		width: 100%;
+		padding-left: .2em;
+		padding-right: .2em;
+		&:hover,
+		&:focus {
+			border-color: $col-mdgrey !important;
+			background: $col-mdgrey !important;
+			color: $col-white !important;
+			
+		}
+
+		max-width: none !important;
+
+		@media screen and (min-width: $md-bp) {
+			font-size: 0.8125em !important;
+		}
+	
+	}
+}	
+@media (min-width: $md-bp){
+	.bc-account-page {
+	    padding: 4em 0 !important;
+	}
+	.bc-account-login__form {
+		padding-bottom: 3em !important;
+		
+	}
+	.bc-account-login__form, 
+	.bc-account-login__register {
+		width: 55% !important;
+	}
+	.bc-account-login__form-inner, 
+	.bc-account-login__form form {
+	    max-width: 400px !important;
+	}
+	
+	.bc-account-login__form p.login-password, 
+	.bc-account-login__form p.login-remember, 
+	.bc-account-login__form p.login-username {
+		padding-right: 0 !important;
+	}
+	
+}
+
+
+
+/* search results
+====================================================== */
+
+.search-results-page {
+	opacity: 0;
+	@include transition(.5s);
+	&.ready {
+		opacity: 1;
+	}
+	
+}
+
+
+
+/* email sign up
+====================================================== */
+
+
+.page-id-email-sign-up {
+	.category-banner {
+	    margin-bottom: 1.25em;
+		.content {
+			max-width: 29em;
+		}
+		
+	}
+	.subscribe-form-wrap  {
+		margin-top: 0;
+	}
+}
+
+
+
+/* reviews on product page
+====================================================== */
+
+.single-bigcommerce_product {
+	.bc-product-review-form {
+	    height: auto;
+	    overflow: hidden;
+	    max-height: none;		
+	}
+	.bc-account-pages-restyled .bc-form__control.active .bc-form__label {
+		top: 0;		
+	}
+/*
+	.bc-account-pages-restyled .bc-form__control .bc-form__label {
+		top: 1.8em;
+	}
+*/
+}
+
+.review-form-wrap {
+	display: none;
+	.bc-single-product__reviews {
+		border: none;
+	}
+	.bc-product-reviews__header {
+		display: none;
+		
+	}
+	
+}
+
+
+/* Lost password
+====================================================== */
+
+.bc-account-lost-password {
+	@extend .bc-account-pages-restyled;
+	
+}
+
+.bc-btn.bc-btn--lost-password {
+	@extend .btn;
+	@extend .btn-checkout;
+	
+}
+	
+ul.bc-account-lost-password__account-actions {
+	text-align: center;
+	margin: 0;
+	display: block;	
+	width: 100%;
+	margin: 0;
+	padding: 1.5em 0;
+	display: inline-block;
+	li {
+		margin: 0;
+		padding: 0;
+		display: block;	
+		&:before {
+			display: none;
+		}
+	}
+	a {
+		color: $col-mdgrey;
+		letter-spacing: 0.058125em;
+		text-transform: uppercase;
+		padding: .7em;
+		display: block;
+		font-size: 1.0em;
+		text-decoration: none;
+		@include transition(opacity .5s);
+		&:focus,
+		&:hover {
+			opacity: .8;
+		}
+	}
+	a.open {
+		font-weight: 600;
+	}
+
+	@media(min-width:$lg-bp) {
+		display: inline-block;
+		vertical-align: middle;
+		padding: 2.2em 1em 2.2em 0;
+			
+   		li {
+
+			display: inline-block;
+		}
+		a {
+			padding: .4em 0em;
+			font-size: .8em;
+		}
+	}
+
+}
+
+/* account nav
+====================================================== */
+
+aside.bc-subnav {
+	@media(min-width:$lg-bp) {
+	    display: flex;
+	    justify-content: space-between;
+	    align-items: baseline;
+	    .btn.btn-checkout {
+		    width: auto;
+	    }	
+	
+	}
+}
+
+
+
+
+/* order history
+====================================================== */
+ 
+.bc-account-pages-restyled {
+	
+	.bc-account-address__edit, 
+	.bc-account-address__delete, 
+	button.bc-account-address__edit, 
+	button.bc-account-address__delete, 
+	a.bc-account-address__edit, 
+	a.bc-account-address__delete {
+		color: #000;
+		&:focus,
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	.bc-order-product-row__quantity,
+	.bc-order-meta__label, 
+	.bc-order-meta__value,
+	.bc-order__header {
+	    font-size: 1em;
+	}
+	ul.bc-order__product-list,
+	ul.bc-order-list {
+	    padding-left: 0;
+	}
+}
+.bc-account-addresses {
+	.bc-account-address__meta > span {
+		font-size: 1em;
+	}
+	.bc-account-addresses__list .bc-account-addresses__item {
+		@include box-sizing(border-box);
+		
+	}
+}
+
+
+/* wish list dialog
+====================================================== */
+
+button.bc-product-quick-view__close-button {
+    border: none;
+}
+.bc-wish-list-dialog-title {
+	font-weight: normal;
+}
+.bc-wish-list-dialog-description {
+		font-weight: 300 !important;
+		font-family: 'Roboto', sans-serif;
+}
+.bc-wish-list-dialog-close, 
+button.bc-wish-list-dialog-close {
+		@extend .btn;
+		@extend .btn-standard;
+}
+
+.bc-wish-list-public-field {
+	margin-right: .5em;
+}
+.bc-wish-list-dialog-form {
+	.bc-link {
+		color: $col-black;		
+	}
+	.field-wrap {
+		text-align: center;
+	}
+	.field {
+	    margin-bottom: 2em;
+	    display: inline-block;
+		> label {
+			font-weight: 300 !important;
+			font-family: 'Roboto', sans-serif;
+		}
+
+	}
+	.bc-btn.bc-btn--form-submit {
+		@extend .btn;
+		@extend .btn-checkout;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+	}
+}
+
+@media (min-width: 960px) {
+	.bc-wish-list-name-field {
+	    min-width: 30em;
+		
+	}
+	.bc-wish-list-dialog-content-wrapper {
+	    height: auto;
+	    max-width: 960px;
+	    margin: 0;
+	    top: 50%;
+	    transform: translate(-50%,-50%)  !important;
+	    padding: 40px 0 50px;
+	}
+}

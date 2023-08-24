@@ -1,0 +1,232 @@
+@import "__variables";
+
+@mixin box-sizing($box-sizing) {
+	-webkit-box-sizing:$box-sizing;
+	-moz-box-sizing:$box-sizing;
+	-ms-box-sizing:$box-sizing;
+	-o-box-sizing:$box-sizing;
+	box-sizing:$box-sizing;
+}
+@mixin transition($transition...) {
+	-webkit-transition:$transition;
+	-moz-transition:$transition;
+	-ms-transition:$transition;
+	-o-transition:$transition;
+	transition:$transition;
+}
+
+@mixin transition-delay($transition-delay) {
+	-webkit-transition-delay:$transition-delay;
+	-moz-transition-delay:$transition-delay;
+	-ms-transition-delay:$transition-delay;
+	-o-transition-delay:$transition-delay;
+	transition-delay:$transition-delay;
+}
+
+@mixin user-select($user-select) {
+	-webkit-user-select:$user-select;
+	-moz-user-select:$user-select;
+	-ms-user-select:$user-select;
+	-o-user-select:$user-select;
+	user-select:$user-select;
+}
+
+@mixin appearance($appearance) {
+	-webkit-appearance:$appearance;
+	-moz-appearance:$appearance;
+	-ms-appearance:$appearance;
+	-o-appearance:$appearance;
+	appearance:$appearance;
+}
+
+@mixin background-size($backgroundsize) {
+	-webkit-background-size:$backgroundsize;
+	-moz-background-size:$backgroundsize;
+	-ms-background-size:$backgroundsize;
+	-o-background-size:$backgroundsize;
+	background-size:$backgroundsize;
+}
+@mixin box-shadow($box-shadow) {
+	-webkit-box-shadow:$box-shadow;
+	-moz-box-shadow:$box-shadow;
+	-ms-box-shadow:$box-shadow;
+	-o-box-shadow:$box-shadow;
+	box-shadow:$box-shadow;
+}
+
+@mixin transition-prop($property, $value) {
+    -webkit-transition-#{$property}: $value;
+    -moz-transition-#{$property}: $value;
+    -ms-transition-#{$property}: $value;
+    -o-transition-#{$property}: $value;
+    transition-#{$property}: $value;
+}
+
+@mixin pf-transition($time, $property: all) {
+    -webkit-transition: -webkit-$property $time ease-in-out;
+    -moz-transition: -moz-$property $time ease-in-out;
+    -ms-transition: -ms-$property $time ease-in-out;
+    -o-transition: -o-$property $time ease-in-out;
+    transition: $property $time ease-in-out;
+}
+
+@mixin opacity($value) {
+    $calc_val: $value * 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=${calc_val})";
+    filter: alpha(opacity=$calc_val);
+    -moz-opacity: $value;
+    -khtml-opacity: $value;
+    opacity: $value;
+}
+
+@mixin transform($val:0%) {
+    -webkit-transform: $val;
+    -moz-transform:$val;
+    -ms-transform: $val;
+    -o-transform: $val;
+    transform: $val;
+}
+
+
+@mixin transform-prop($property, $val:0%) {
+    -webkit-transform-#{$property}: $val;
+    -moz-transform-#{$property}:$val;
+    -ms-transform-#{$property}: $val;
+    -o-transform-#{$property}: $val;
+    transform-#{$property}: $val;
+}
+
+@mixin border-radius($radius: 6px) {
+    -khtml-border-radius:$radius;
+    -moz-border-radius:$radius;
+    -webkit-border-radius:$radius;
+    border-radius:$radius;
+}
+
+@mixin boxshadow ($x-offset: 0, $y-offset: 1px, $blur: 2px, $spread: 0, $colour: rgba(0,0,0,0.1)) {
+    -webkit-box-shadow: $x-offset $y-offset $blur $spread $colour;
+    -moz-box-shadow: $x-offset $y-offset $blur $spread $colour;
+    box-shadow: $x-offset $y-offset $blur $spread $colour;
+}
+
+@mixin multishadow ($shadow) {
+    $shadow: unquote($shadow);
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+@mixin grayscale($perc: 100%) {
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+    filter: gray;
+    -webkit-filter: grayscale($perc);
+    filter: grayscale($perc);
+}
+
+@mixin flex-align($value: center) {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -webkit-align-items: $value;
+    -ms-flex-align: $value;
+    align-items: $value;
+}
+
+@mixin flex-justify($value: center) {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -webkit-justify-content: $value;
+    -ms-flex-pack: $value;
+    justify-content: $value;
+}
+
+@mixin flex-wrap($value: wrap) {
+    -webkit-flex-wrap: $value;
+    -ms-flex-wrap: $value;
+    flex-wrap: $value;
+}
+
+@mixin flex() {
+    -ms-box-orient: horizontal;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin viewport($property, $initialsize, $maxwidth, $unit: vw) {
+    #{$property}: ($initialsize*100)/$maxwidth + $unit;
+}
+
+/*
+ *  KEYFRAMES
+ */
+
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+@mixin animation ($delay, $duration, $animation, $fill: none, $iterate: infinite, $timing: ease-in-out) {
+    -webkit-animation-delay: $delay;
+    -webkit-animation-duration: $duration;
+    -webkit-animation-name: $animation;
+    -webkit-animation-fill-mode: $fill;
+    -webkit-animation-iteration-count: $iterate;
+    -webkit-animation-timing-function: $timing;
+
+    -moz-animation-delay: $delay;
+    -moz-animation-duration: $duration;
+    -moz-animation-name: $animation;
+    -moz-animation-fill-mode: $fill;
+    -moz-animation-iteration-count: $iterate;
+    -moz-animation-timing-function: $timing;
+
+    animation-delay: $delay;
+    animation-duration: $duration;
+    animation-name: $animation;
+    animation-fill-mode: $fill;
+    animation-iteration-count: $iterate;
+    animation-timing-function: $timing;
+}
+
+@include keyframes(fadeIn) {
+    from    {@include opacity(0);}
+    to      {@include opacity(1);}
+}
+
+@include keyframes(fadeOut) {
+    from    {@include opacity(1);}
+    to      {@include opacity(0);}
+}
+
+@include keyframes(fadeInOut) {
+    0%      {@include opacity(0);}
+    50%     {@include opacity(1);}
+    100%    {@include opacity(0);}
+}
+
+@include keyframes(animateItem) {
+    0% {
+        @include transform(scale(1));   
+    }
+    50% {
+        @include transform(scale(0));
+        @include opacity(0);
+    }
+    100% {
+        @include transform(scale(1));
+        @include opacity(1);
+    }
+}
