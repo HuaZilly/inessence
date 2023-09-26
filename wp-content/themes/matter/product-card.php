@@ -165,9 +165,17 @@
 
 
 		<div class="rating">
-            <div class="yotpo bottomLine"
-                 data-yotpo-product-id="<?= $product->bc_id() ?>">
+            <?php
+                $starRating = get_field('star_rating_bottomline', 'options');
+            ?>
+            <div class="rating-star">
+                <?php if ($starRating) :?>
+                    <?=
+                    str_replace('%product.id', $product->bc_id(), $starRating);
+                    ?>
+                <?php endif; ?>
             </div>
+
         </div>
 
 		<p>

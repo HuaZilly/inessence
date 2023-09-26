@@ -22,3 +22,16 @@ body {
     }
   }
 }
+.yotpo-search-filter {
+  .yotpo-search-label {
+    .yotpo-search-input {
+      position: static;
+    }
+  }
+}
+.rating-star {
+  cursor: pointer;
+  .yotpo-sr-bottom-line-summary {
+    flex-direction: row !important;
+  }
+}
